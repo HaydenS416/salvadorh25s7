@@ -5,6 +5,7 @@ html, body {
   padding: 0;
 }
 
+
 html {
   font-size: 10px;
   background-color: #a9a9a9;
@@ -135,4 +136,19 @@ aside img {
 
 footer {
   margin-top: 10px;
+}
+
+/* === ADDITION for centering Birdwatching text & pushing image right === */
+
+header .branding {
+  display: flex;
+  align-items: center;              /* vertically center */
+  justify-content: space-between;   /* push h1 left/middle, image right */
+  width: 100%;
+}
+
+header .branding h1 {
+  flex-grow: 1;
+  margin: 0;
+  text-align: center;
 }

@@ -3,10 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+        <!--
+        Name: Hayden
+        Student Number: 100984538
+        Date: 2025-05-09
+        Description: Website main page for INFT1206
+    -->
     <title>Mozilla splash page</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <style>
-      /* header and body setup */
 
       html {
         font-family: 'Open Sans', sans-serif;
@@ -21,7 +26,6 @@
         position: relative;
       }
 
-      /* Header styling */
 
       header {
         height: 150px;
@@ -40,7 +44,6 @@
         margin: 0 0 0 32.5px;
       }
 
-      /* main section and video styling */
 
       main {
         background: #ccc;
@@ -64,7 +67,6 @@
         max-width: 100%;
       }
 
-      /* further info links */
 
       .further-info {
         clear: left;
@@ -88,8 +90,6 @@
         clear: both;
       }
 
-      /* Red panda image */
-
       .red-panda img {
         display: block;
         max-width: 100%;
@@ -99,13 +99,11 @@
   <body>
     <header>
       <h1>Mozilla</h1>
-      <!-- insert <img> element, link to the small version of the Firefox logo -->
       <img src="firefox_logo-only_RGB.png" alt="Firefox logo">
     </header>
 
     <main>
       <article>
-        <!-- insert iframe from youtube -->
         <iframe width="400" height="225" src="https://www.youtube.com/embed/ojcNcvb1olg"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -119,37 +117,23 @@
       </article>
 
       <div class="further-info">
-        <!-- insert images with srcsets and sizes -->
         <a href="https://www.mozilla.org/en-US/firefox/new/">
-          <img src="firefox_logo-only_RGB.png" alt="Download Firefox"
-               srcset="firefox_logo-only_RGB.png 1x, firefox_logo@2x.png 2x"
-               sizes="(max-width: 600px) 100vw, 25vw">
+          <img src="firefox_logo-only_RGB.png" alt="Download Firefox">
         </a>
         <a href="https://www.mozilla.org/">
-          <img src="mozilla-dinosaur-head.png" alt="Visit Mozilla"
-               srcset="mozilla-dinosaur-head.png 1x, mozilla-dinosaur-head@2x.png 2x"
-               sizes="(max-width: 600px) 100vw, 25vw">
+          <img src="mozilla-dinosaur-head.png" alt="Visit Mozilla">
         </a>
         <a href="https://addons.mozilla.org/">
-          <img src="firefox-addons.jpg" alt="Firefox Add-ons"
-               srcset="firefox-addons.jpg 1x, firefox-addons@2x.jpg 2x"
-               sizes="(max-width: 600px) 100vw, 25vw">
+          <img src="firefox-addons.jpg" alt="Firefox Add-ons">
         </a>
         <a href="https://developer.mozilla.org/en-US/">
-          <img src="mdn.svg" alt="MDN Web Docs"
-               srcset="mdn.svg 1x, mdn@2x.svg 2x"
-               sizes="(max-width: 600px) 100vw, 25vw">
+          <img src="mdn.svg" alt="MDN Web Docs">
         </a>
         <div class="clearfix"></div>
       </div>
 
       <div class="red-panda">
-        <!-- insert picture element -->
-        <picture>
-          <source srcset="red-panda-large.jpg" media="(min-width: 800px)">
-          <source srcset="red-panda-medium.jpg" media="(min-width: 500px)">
-          <img src="red-panda-small.jpg" alt="Red panda lying on a tree branch">
-        </picture>
+        <img src="red-panda.jpg" alt="Red panda lying on a tree branch">
       </div>
     </main>
   </body>

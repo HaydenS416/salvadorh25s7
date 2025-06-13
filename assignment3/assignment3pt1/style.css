@@ -5,38 +5,42 @@
 	part one of assignment 3
 */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-  color: #375e97;
-  font-size: 2em;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  border-bottom: 1px solid #375e97;
+    color: #375e97;
+    font-size: 2em;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    border-bottom: 1px solid #375e97;
 }
 
 h2 {
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 .job-title {
-  color: #999999;
-  font-weight: bold;
+    color: #999999;
+    font-weight: bold;
 }
 
 a:link,
 a:visited {
-  color: #fb6542;
+    color: #fb6542;
 }
 
 a:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 /*
 make the level one heading pink using the CSS color keyword hotpink
 */
 
-h1{
+h1 {
     color: hotpink;
+    /*
+        give the heading a 10px dotted border-bottom which uses the CSS color keyword purple
+    */
+    border-bottom: 10px dotted purple;
 }

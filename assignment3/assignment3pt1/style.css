@@ -1,3 +1,9 @@
+/*
+	Name: Hayden Salvador
+	File: style.css
+	Date: 13 June 2025
+	part one of assignment 3
+*/
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -25,4 +31,12 @@ a:visited {
 
 a:hover {
   text-decoration: none;
+}
+
+/*
+make the level one heading pink using the CSS color keyword hotpink
+*/
+
+h1{
+    color: hotpink;
 }

@@ -99,4 +99,9 @@ article::after {
   gap: 1px;
 }
 
+.photos img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 

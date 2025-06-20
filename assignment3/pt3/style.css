@@ -104,3 +104,8 @@ a:active {
   padding: 2px;
   border-radius: 2px;
 }
+
+a[href^="http"]:after {
+  content: url('external-link-52.png');
+  padding-left: 5px;
+}

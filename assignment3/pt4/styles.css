@@ -72,3 +72,16 @@ main article .feature {
   margin-bottom: 10px;
 }
 
+.grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.grid > article {
+  flex: 2;
+}
+.grid > aside {
+  flex: 1;
+}
+
+

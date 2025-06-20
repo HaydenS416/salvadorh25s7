@@ -79,3 +79,8 @@ h2 {
 h3 {
   font-size: 1.5rem;
 }
+
+section h2 + p,
+section h3 + p {
+  text-indent: 20px;
+}

@@ -57,6 +57,7 @@ nav ul {
 
 nav ul li {
   flex: 1;
+  text-align: center;
 }
 
 nav {
@@ -64,9 +65,10 @@ nav {
   top: 0px;
 }
 
-.feature {
+main article .feature {
   float: left;
   width: 200px;
-  margin: 0 20px 20px 0;
-  shape-margin: 1em;
+  margin-right: 20px;
+  margin-bottom: 10px;
 }
+

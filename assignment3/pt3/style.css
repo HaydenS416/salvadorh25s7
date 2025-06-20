@@ -105,7 +105,50 @@ a:active {
   border-radius: 2px;
 }
 
-a[href^="http"]:after {
-  content: url('external-link-52.png');
-  padding-left: 5px;
+a[href^="http"]::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 5px;
+  background: url('external-link-52.png') no-repeat center center;
+  background-size: contain;
+}
+
+ul, ol {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 1.2em;
+}
+
+li {
+  line-height: 1.6;
+  list-style-type: square;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  margin: 15px 0;
+}
+
+nav a {
+  display: block;
+  padding: 10px;
+  border: 1px solid #a66;
+  text-align: center;
+  font-weight: bold;
+  background-color: white;
+  color: #a66;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #a66;
+  color: white;
 }

@@ -84,3 +84,23 @@ section h2 + p,
 section h3 + p {
   text-indent: 20px;
 }
+
+a:link,
+a:visited {
+  color: #a66;
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+  color: #800;
+  text-decoration: none;
+  outline: none;
+}
+
+a:active {
+  color: white;
+  background-color: #a66;
+  padding: 2px;
+  border-radius: 2px;
+}

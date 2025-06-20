@@ -84,4 +84,19 @@ main article .feature {
   flex: 1;
 }
 
+article::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.photos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+}
+
 

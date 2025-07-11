@@ -4,7 +4,7 @@ const customName = document.getElementById('customname');
 const randomize = document.querySelector('.randomize');
 const story = document.querySelector('.story');
 
-let storyText = 'It was 94 fahrenheit outside, so : insertx: went for a walk.When they got to: inserty:, they stared in horror for a few moments, then : insertz:.Bob saw the whole thing, but was not surprised — : insertx: weighs 300 pounds, and it was a hot day.'
+let storyText = 'It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.'
 ;
 let insertx = [
     'Willy the Goblin',
@@ -52,8 +52,10 @@ let newStory = storyText;
     const weight = Math.round(300);
     const temperature =  Math.round(94);
 
+    newStory = newStory.replace('94 fahrenheit', temperature);
+    newStory = newStory.replace('300 pounds', weight);
   }
 
-  story.textContent = ;
+  story.textContent = newStory;
   story.style.visibility = 'visible';
 }

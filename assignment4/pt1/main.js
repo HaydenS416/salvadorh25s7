@@ -39,6 +39,10 @@ let newStory = storyText;
   const yItem = randomValueFromArray(inserty);
   const zItem = randomValueFromArray(insertz);
 
+  newStory = newStory.replace(/:insertx:/g, xItem);
+  newStory = newStory.replace(':inserty:', yItem);
+  newStory = newStory.replace(':insertz:', zItem);
+
   if(customName.value !== '') {
     const name = customName.value;
 

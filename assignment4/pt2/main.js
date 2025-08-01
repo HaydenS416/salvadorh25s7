@@ -23,6 +23,8 @@ imageFiles.forEach(file => {
 
 
 /* Declaring the alternative text for each image file */
+displayedImage.setAttribute('src', 'images/pic5.jpg');
+displayedImage.setAttribute('alt', 'A beautiful butterfly on a leaf');
 
 /* Looping through images */
 

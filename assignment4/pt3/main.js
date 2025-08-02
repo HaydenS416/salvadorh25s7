@@ -77,4 +77,19 @@ function loop() {
   requestAnimationFrame(loop);
 }
 
+Ball.prototype.collisionDetect = function () {
+  for (let i = 0; i < balls.length; i++) {
+    if (!(this === balls[i])) {
+      const dx = this.x - balls[i].x;
+      const dy = this.y - balls[i].y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < this.size + balls[i].size) {
+        this.color = balls[i].color = randomRGB();
+      }
+    }
+  }
+};
+
+
 loop();

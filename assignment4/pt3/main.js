@@ -15,24 +15,65 @@ function random(min, max) {
 // function to generate random color
 
 function randomRGB() {
-  return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
+  return rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)});
 }
 
-class Ball {
-  constructor(x, y, velX, velY, color, size) {
-    this.x = x;
-    this.y = y;
-    this.velX = velX;
-    this.velY = velY;
-    this.color = color;
-    this.size = size;
-  }
-
-    draw() {
-    ctx.beginPath();
-    ctx.fillStyle = this.color;
-    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-    ctx.fill();
-  }
+function Ball(x, y, velX, velY, color, size) {
+  this.x = x;
+  this.y = y;
+  this.velX = velX;
+  this.velY = velY;
+  this.color = color;
+  this.size = size;
 }
 
+
+Ball.prototype.draw = function () {
+  ctx.beginPath();
+  ctx.fillStyle = this.color;
+  ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+  ctx.fill();
+};
+
+
+Ball.prototype.update = function () {
+  if ((this.x + this.size) >= width || (this.x - this.size) <= 0) {
+    this.velX = -this.velX;
+  }
+
+  if ((this.y + this.size) >= height || (this.y - this.size) <= 0) {
+    this.velY = -this.velY;
+  }
+
+  this.x += this.velX;
+  this.y += this.velY;
+};
+
+let balls = [];
+
+while (balls.length < 25) {
+  let size = random(10, 20);
+  let ball = new Ball(
+    random(size, width - size),
+    random(size, height - size),
+    random(-7, 7),
+    random(-7, 7),
+    randomRGB(),
+    size
+  );
+  balls.push(ball);
+}
+
+function loop() {
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillRect(0, 0, width, height);
+
+  for (let i = 0; i < balls.length; i++) {
+    balls[i].draw();
+    balls[i].update();
+  }
+
+  requestAnimationFrame(loop);
+}
+
+loop();
